@@ -1,3 +1,4 @@
+
 import { ExternalLink, Globe } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -102,7 +103,14 @@ const Work = () => {
         </div>
 
         <div className="text-center mt-16">
-          
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 group"
+            onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Start Your Project
+            <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
       </div>
     </section>
