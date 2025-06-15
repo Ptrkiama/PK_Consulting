@@ -19,10 +19,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission
     console.log('Form submitted:', formData);
-    
+
     toast({
       title: "Message sent!",
       description: "We'll get back to you within 24 hours.",
@@ -68,17 +68,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-background to-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Let's</span>{' '}
-            <span className="text-gradient-primary">Connect</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Ready to bring your vision to life? Let's discuss how we can help 
-            you achieve your goals.
-          </p>
-        </div>
-
+        {/* Removed the "Let's Connect" header and its paragraph */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="bg-card/50 border-border">
@@ -208,3 +198,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
