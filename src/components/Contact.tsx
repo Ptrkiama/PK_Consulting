@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -64,14 +65,7 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-white mb-4">Office Hours</h4>
-              <div className="space-y-2 text-gray-400">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
-                <p>Saturday: 10:00 AM - 2:00 PM PST</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
+            {/* Office Hours section removed here */}
           </div>
         </div>
       </div>
@@ -80,3 +74,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
