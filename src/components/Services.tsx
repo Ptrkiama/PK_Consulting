@@ -1,82 +1,83 @@
 
-import { Code, Palette, Rocket, Zap, Globe, Users } from 'lucide-react';
+import { Code, Palette, Rocket, Zap, Globe, Users, Database, Shield } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Services = () => {
   const services = [
     {
       icon: Code,
-      title: 'Web Development',
-      description: 'Custom web applications built with cutting-edge technologies and optimized for performance.',
-      features: ['React & Next.js', 'TypeScript', 'API Integration', 'Database Design']
+      title: 'Full-Stack Development',
+      description: 'End-to-end web applications built with modern frameworks and optimized for peak performance.',
+      features: ['React & Next.js', 'Node.js & Python', 'Cloud Integration', 'API Development']
     },
     {
       icon: Palette,
       title: 'UI/UX Design',
-      description: 'Beautiful, intuitive interfaces that provide exceptional user experiences across all devices.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems']
+      description: 'Stunning, user-centric interfaces that drive engagement and deliver exceptional experiences.',
+      features: ['Design Systems', 'Prototyping', 'User Research', 'Brand Identity']
     },
     {
-      icon: Rocket,
-      title: 'Brand Strategy',
-      description: 'Comprehensive brand development that captures your essence and resonates with your audience.',
-      features: ['Brand Identity', 'Visual Strategy', 'Market Research', 'Brand Guidelines']
+      icon: Database,
+      title: 'Data Solutions',
+      description: 'Robust database architectures and analytics platforms that scale with your business growth.',
+      features: ['Database Design', 'Data Analytics', 'Business Intelligence', 'Migration Services']
     },
     {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Lightning-fast websites and applications that convert visitors into customers.',
-      features: ['Speed Optimization', 'SEO Enhancement', 'Analytics Setup', 'Conversion Tracking']
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions to protect your digital assets and user data.',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Risk Assessment']
     },
     {
       icon: Globe,
-      title: 'Digital Marketing',
-      description: 'Strategic digital campaigns that amplify your reach and drive meaningful engagement.',
-      features: ['Content Strategy', 'Social Media', 'Email Campaigns', 'Growth Hacking']
+      title: 'Digital Transformation',
+      description: 'Strategic digital initiatives that modernize operations and accelerate business growth.',
+      features: ['Process Automation', 'Legacy Migration', 'Digital Strategy', 'Change Management']
     },
     {
       icon: Users,
-      title: 'Consulting',
-      description: 'Expert guidance to navigate digital transformation and achieve your business objectives.',
-      features: ['Tech Strategy', 'Digital Roadmap', 'Team Training', 'Process Optimization']
+      title: 'Tech Consulting',
+      description: 'Expert guidance to navigate complex technology decisions and optimize your tech stack.',
+      features: ['Architecture Review', 'Team Scaling', 'Technology Strategy', 'Performance Optimization']
     }
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-background to-gray-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+    <section id="services" className="py-32 bg-gradient-to-b from-slate-950 to-emerald-950/20 relative">
+      <div className="absolute inset-0 hex-pattern opacity-20"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">
             <span className="text-gradient">Our</span>{' '}
             <span className="text-gradient-primary">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            We combine strategic thinking with technical excellence to deliver 
-            solutions that drive real business growth.
+          <p className="text-2xl text-emerald-100 max-w-4xl mx-auto leading-relaxed">
+            Comprehensive technology solutions designed to transform your business 
+            and drive measurable results in today's digital landscape.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <Card 
               key={service.title} 
-              className="bg-card/50 border-border hover:bg-card/80 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-primary/10"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-gradient-card border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-500 group hover:scale-105 hover-glow"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <service.icon className="h-8 w-8 text-primary" />
+              <CardContent className="p-10">
+                <div className="mb-8">
+                  <div className="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/30 transition-colors duration-300 neon-glow">
+                    <service.icon className="h-10 w-10 text-emerald-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                  <h3 className="text-3xl font-bold text-emerald-100 mb-4">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-lg">{service.description}</p>
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {service.features.map((feature) => (
-                    <div key={feature} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                      {feature}
+                    <div key={feature} className="flex items-center text-emerald-200">
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-4 animate-sparkle"></div>
+                      <span className="text-base">{feature}</span>
                     </div>
                   ))}
                 </div>
