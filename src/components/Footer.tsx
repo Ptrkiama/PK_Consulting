@@ -14,8 +14,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="text-3xl font-bold text-gradient-primary">HEPHA</span>
-            <p className="text-gray-400 mt-2">Crafting digital excellence</p>
+            <span className="text-3xl font-bold text-gradient-primary">NextWallace Technologies</span>
+            <p className="text-gray-400 mt-2">Next-Level Tech. Real-World Impact</p>
           </div>
 
           <div className="flex space-x-6">
@@ -34,7 +34,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            © 2024 Hepha. All rights reserved. Crafted with passion and precision.
+            © 2024 NextWallace Technologies. All rights reserved. Crafted with passion and precision.
           </p>
         </div>
       </div>
