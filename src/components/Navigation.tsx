@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,12 +24,16 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? 'glass-effect shadow-2xl' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+        <div className="flex justify-between items-center h-20">
+          {/* Enhanced Logo */}
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-xl flex items-center justify-center glow-effect">
+              <Zap className="h-6 w-6 text-white" />
+            </div>
             <span className="text-2xl font-bold text-gradient-primary">NextWallace Technologies</span>
           </div>
 
@@ -40,14 +44,14 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
+                  className="text-gray-300 hover:text-white transition-all duration-300 relative group px-4 py-2 rounded-lg hover:bg-primary/10"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
@@ -57,22 +61,22 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-primary/10"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-card/95 backdrop-blur-lg rounded-lg mt-2 border border-border">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="md:hidden glass-effect rounded-2xl mt-4 border border-primary/20 shadow-2xl">
+            <div className="px-4 pt-4 pb-6 space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                  className="block px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-primary/10 hover:glow-effect"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);
