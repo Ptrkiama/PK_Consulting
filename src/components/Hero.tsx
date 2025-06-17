@@ -12,7 +12,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8 animate-fade-in">
+        <div className="space-y-12 animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
             <span className="block text-gradient mb-4">Next-Level</span>
             <span className="block text-gradient-primary">Tech.</span>
@@ -20,12 +20,14 @@ const Hero = () => {
             <span className="block text-gradient-primary">Impact</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            NextWallace Technologies crafts extraordinary digital experiences that elevate your brand 
-            and drive meaningful results through innovative design and cutting-edge technology.
-          </p>
+          <div className="pt-8">
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              NextWallace Technologies crafts extraordinary digital experiences that elevate your brand 
+              and drive meaningful results through innovative design and cutting-edge technology.
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-12">
             <Button 
               variant="outline" 
               size="lg"
