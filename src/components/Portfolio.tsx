@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-const Work = () => {
+const Portfolio = () => {
   const projects = [
     {
       title: 'MECS General Supply',
@@ -27,7 +27,7 @@ const Work = () => {
   ];
 
   return (
-    <section id="work" className="py-24 bg-gradient-to-b from-gray-950 to-background">
+    <section id="Portfolio" className="py-24 bg-gradient-to-b from-gray-950 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
@@ -163,4 +163,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Portfolio;

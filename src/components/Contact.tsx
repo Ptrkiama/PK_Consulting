@@ -48,19 +48,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@hepha.com',
-      link: 'mailto:hello@hepha.com'
+      value: 'hello@pktech.co.tz',
+      link: 'mailto:hello@pktech.co.tz'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+255 675 129 428',
+      link: 'tel:+255675129428'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Dar es salaam, TZ',
       link: null
     }
   ];
@@ -180,15 +180,6 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="pt-8">
-              <h4 className="text-lg font-semibold text-white mb-4">Office Hours</h4>
-              <div className="space-y-2 text-gray-400">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
-                <p>Saturday: 10:00 AM - 2:00 PM PST</p>
-                <p>Sunday: Closed</p>
-              </div>
             </div>
           </div>
         </div>
