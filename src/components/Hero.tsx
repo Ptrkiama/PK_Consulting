@@ -15,7 +15,6 @@ const Hero = () => {
         <div className="space-y-12 animate-fade-in">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
             <span className="block text-gradient mb-4">Next-Level</span>
-            <span className="block text-gradient-primary">Tech.</span>
             <span className="block text-gradient">Real-World</span>
             <span className="block text-gradient-primary">Impact</span>
           </h1>
