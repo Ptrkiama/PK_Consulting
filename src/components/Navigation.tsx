@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,34 +24,30 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-effect shadow-2xl border-b border-emerald-500/20' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Tech Logo */}
-          <div className="flex-shrink-0 flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center neon-glow">
-              <Zap className="h-7 w-7 text-white" />
-            </div>
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
             <span className="text-2xl font-bold text-gradient-primary">NextWallace Technologies</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-emerald-100 hover:text-emerald-400 transition-all duration-300 relative group px-4 py-3 rounded-xl hover:bg-emerald-500/10 font-medium"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(item.href)?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-green-500 transition-all duration-300 group-hover:w-full neon-glow"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </div>
@@ -61,22 +57,22 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-emerald-100 hover:text-emerald-400 transition-colors duration-300 p-3 rounded-xl hover:bg-emerald-500/10"
+              className="text-gray-300 hover:text-white transition-colors duration-200"
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden glass-effect rounded-2xl mt-4 border border-emerald-500/30 shadow-2xl neon-glow">
-            <div className="px-6 pt-6 pb-8 space-y-4">
+          <div className="md:hidden bg-card/95 backdrop-blur-lg rounded-lg mt-2 border border-border">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-6 py-4 text-emerald-100 hover:text-emerald-400 transition-all duration-300 rounded-xl hover:bg-emerald-500/20 hover-glow font-medium text-lg"
+                  className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);

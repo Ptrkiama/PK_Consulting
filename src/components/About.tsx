@@ -1,84 +1,71 @@
 
-import { Award, Target, Lightbulb, Heart, Code2, Rocket } from 'lucide-react';
+import { Award, Target, Lightbulb, Heart } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
       icon: Target,
-      title: 'Precision Engineering',
-      description: 'Every algorithm, every interface, every system is architected with meticulous attention to technical excellence.'
+      title: 'Precision',
+      description: 'Every pixel, every interaction, every line of code is crafted with meticulous attention to detail.'
     },
     {
       icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We embrace emerging technologies and push the boundaries of what\'s possible in digital solutions.'
+      title: 'Innovation',
+      description: 'We push boundaries and explore new technologies to deliver cutting-edge solutions.'
     },
     {
       icon: Heart,
-      title: 'Client Partnership',
-      description: 'Your success drives our passion. We invest deeply in understanding and achieving your business objectives.'
+      title: 'Passion',
+      description: 'We love what we do, and it shows in every project we undertake.'
     },
     {
       icon: Award,
-      title: 'Technical Mastery',
-      description: 'We maintain expertise across the full technology stack to deliver enterprise-grade solutions.'
+      title: 'Excellence',
+      description: 'We never settle for good enough. We strive for exceptional in everything we create.'
     }
   ];
 
   return (
-    <section id="about" className="py-32 bg-gradient-to-b from-emerald-950/20 to-slate-950 relative">
-      <div className="absolute inset-0 hex-pattern opacity-15"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section id="about" className="py-24 bg-gradient-to-b from-gray-950 to-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-10">
-              <span className="text-gradient">Engineering</span><br />
-              <span className="text-gradient-primary">Digital Future</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8">
+              <span className="text-gradient">Crafting Digital</span><br />
+              <span className="text-gradient-primary">Experiences</span>
             </h2>
             
-            <div className="space-y-8 text-xl text-emerald-100 leading-relaxed">
+            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                At NextWallace Technologies, we combine cutting-edge technical expertise 
-                with strategic business insight to create transformative digital solutions.
+                At Hepha, we believe in the power of exceptional design and flawless execution. 
+                Our team of passionate creators and technical experts work together to bring 
+                your vision to life.
               </p>
               
               <p>
-                Our multidisciplinary team of engineers, designers, and strategists 
-                collaborates closely with clients to architect scalable, secure, and 
-                user-centric applications that drive measurable business growth.
+                We don't just build websites and applications – we craft digital experiences 
+                that resonate with your audience and drive meaningful results for your business.
               </p>
               
               <p>
-                From concept through deployment and beyond, we leverage the latest 
-                technologies and industry best practices to ensure every project 
-                exceeds expectations and delivers lasting value.
+                From concept to launch, we're with you every step of the way, ensuring that 
+                every detail aligns with your goals and exceeds your expectations.
               </p>
-            </div>
-
-            <div className="mt-12 flex items-center gap-8">
-              <div className="flex items-center gap-3">
-                <Code2 className="h-8 w-8 text-emerald-400" />
-                <span className="text-emerald-100 text-lg font-semibold">Clean Code</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Rocket className="h-8 w-8 text-emerald-400" />
-                <span className="text-emerald-100 text-lg font-semibold">Fast Delivery</span>
-              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <div 
                 key={value.title}
-                className="bg-gradient-card border border-emerald-500/20 rounded-3xl p-8 hover:border-emerald-400/40 transition-all duration-500 group hover-glow"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className="bg-card/30 border border-border rounded-2xl p-6 hover:bg-card/50 transition-all duration-300 group"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/30 transition-colors duration-300 neon-glow">
-                  <value.icon className="h-8 w-8 text-emerald-400" />
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-emerald-100 mb-4">{value.title}</h3>
-                <p className="text-emerald-200 leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
