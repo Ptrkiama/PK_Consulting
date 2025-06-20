@@ -34,10 +34,6 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            Our software development company enables businesses to grow and transform using the latest technologies in the software industry.
-          </p>
-
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button

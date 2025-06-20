@@ -47,12 +47,12 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Our</span>{' '}
-            <span className="text-gradient-primary">Expertise</span>
+            <span className="text-gradient">What We</span>{' '}
+            <span className="text-gradient-primary">Do Best</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            We combine strategic thinking with technical excellence to deliver 
-            solutions that drive real business growth.
+            We bring together smart strategy and great tech skills to create solutions that help your business grow for real. 
+            It’s all about making things work in a way that fits your goals and gets results.
           </p>
         </div>
 

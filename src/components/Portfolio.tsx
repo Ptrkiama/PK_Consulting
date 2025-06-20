@@ -36,8 +36,7 @@ const Portfolio = () => {
             <span className="text-gradient-primary">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Discover our latest projects showcasing innovative solutions and cutting-edge technology. 
-            Each project represents our commitment to excellence and client satisfaction.
+            Here’s a look at what we’ve built. These projects reflect our passion, skills, and the trust our clients place in us.
           </p>
         </div>
 
