@@ -29,7 +29,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            © 2025 Crafted with passion and precision.
+           ©2025 Pk Technologies. All rights reserved.
           </p>
         </div>
       </div>
