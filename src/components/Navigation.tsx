@@ -30,7 +30,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
              <img src="/Logo.png" alt="PK Logo" className="h-6 w-6" />
-             <span className="text-2xl font-bold text-gradient-primary">Pk Technologies.</span>
+             <span className="text-2xl font-bold text-gradient-primary">Technologies.</span>
           </div>
 
           {/* Desktop Navigation */}
